@@ -21,7 +21,17 @@ If you're struggling to find how to implement CRUD operations using HTML, here a
 - For updating and deleting, include buttons on each element that edit or delete that specific row
 - Updating is the most complex operation to implement. The edit buttons on each element should populate the existing input tags with that row's data. The save button should then trigger the update function when clicked. You can handle this change from save being create to update by storing the current row's ID in a variable when the edit button is clicked, and checking if that variable is set when clicking save.
 
-In your `README.md`, include a brief description of your project and what you learned while building it. What was difficult about this project and what did you learn about Supabase and creating a CRUD application? Is there anything you would like to add or change for your Project 3 in the future?
+In your `README.md`, include 
+
+**A brief description of your project and what you learned while building it**
+
+
+**What was difficult about this project and what did you learn about Supabase and creating a CRUD application?**
+I was struggling with editing multiple columns at a time, but I had forgotten that you needed to pass in the information as a dictionary in order to make the change.
+Instead I had been trying to do a full line to edit the table for each column instead of doing it all in one edit line. As I was coding it the incorrect way it did feel like I was forgetting something because it felt weird to then have an "error" variable for each column. It didn't seem very scalable. 
+I kept losing information in the supabase table, but it kept updating and editing the first column's information just fine. That was when I realized I needed to pass everything into the first line of code.
+
+**Is there anything you would like to add or change for your Project 3 in the future?**
 
 Submit this project as a GitHub repo named `is120-project3-firstname-lastname`.
 

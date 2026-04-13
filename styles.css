@@ -1,4 +1,6 @@
-
+/* ************************************************************************ */
+/*  */
+/* ************************************************************************ */
 header {
     margin: 0px;
     background-color: #23bef7;
@@ -10,19 +12,15 @@ header {
 }
 
 h1 {
-    /* background-color: white; */
-    font-family: "Ovo";
+    font-family: "Mulish";
     font-size: 40px;
     margin: 0 auto;
     color: white;
-    /* background-color: #ee7752; */
 
 }
 
 /* Need to set the body's margin to 0 so the container centers correctly */
 body {
-    /* margin: 20px; */
-
     /* Adding the gradient background */
     background: linear-gradient(-45deg, #23bef7, #ee7752);
 	background-size: 200% 200%;
@@ -42,9 +40,36 @@ p {
 
 }
 
+label {
+  font-family: "Ovo";
+  font-size: 20px;
+  display: flex;
+  /* align-items: center; */
+  padding: 5px;
+  /* margin: 0 auto; */
+}
+
+/* Input Box CSS Styling */
+input {
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rbga(79, 70, 229, 0.2);
+    outline: none;
+}
+
+
+/* ************************************************************************ */
 /* For the gradient animated background */
+/* ************************************************************************ */
 @keyframes gradient {
-	0% {
+    0% {
 		background-position: 0% 50%;
 	}
 	50% {
@@ -55,10 +80,12 @@ p {
 	}
 }
 
+/* ************************************************************************ */
 /* Font pairing for the cards */
+/* ************************************************************************ */
 .ovo-regular {
-  font-family: "Ovo", serif;
-  font-weight: 400;
+    font-family: "Ovo", serif;
+    font-weight: 400;
   font-style: normal;
 }
 
@@ -69,15 +96,18 @@ p {
 }
 
 
+/* ************************************************************************ */
 /* Creating a fancy button */
+/* ************************************************************************ */
 button {
   font-family: "DM Serif Display", serif;
   font-size: 25px;
   display: flex;
   align-items: center;
-  padding: 10px;
-  margin: 0 auto;
-  margin-top: 20px;
+
+  /* This helped put the buttons on the right side and had them floating in line with the other buttons beneath them */
+  padding: 5px;
+  margin: 10px;
   
   color: #090909;
   font-size: 18px;
@@ -87,13 +117,16 @@ button {
   border: 1px solid #e8e8e8;
   transition: all 0.3s;
   box-shadow: 1px 1px 2px #c5c5c5, -1px -1px 2px #ffffff;
-  
-  
 }
 
 button:active {
   color: #666;
   box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+#create_button {
+    /* This fits the button space around it to fit the text and float in the center of the div */
+    margin: 0 auto;
 }
 
 
@@ -124,9 +157,11 @@ button:active {
 
 }
 
-
-
-
+.container {
+    display: grid;
+    /* display: flex; */
+    align-items: left;
+}
 
 
 /* ************************************************** */
@@ -137,3 +172,6 @@ button:active {
         flex-direction: row;
     }
 }
+
+
+    /* ************************************************************************ */

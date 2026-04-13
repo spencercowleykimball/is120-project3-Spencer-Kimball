@@ -24,6 +24,7 @@ In your `README.md`, include
 
 **A brief description of your project and what you learned while building it**
 
+My project is a reading list that connects to my supabase table. The user can edit and delete the books already on the list as well as adding new books to the list. 
 
 **What was difficult about this project and what did you learn about Supabase and creating a CRUD application?**
 I was struggling with editing multiple columns at a time, but I had forgotten that you needed to pass in the information as a dictionary in order to make the change.

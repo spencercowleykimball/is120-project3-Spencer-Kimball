@@ -65,7 +65,7 @@ async function loadRows() {
   container.innerHTML = "";
 
   // supabase get all rows
-  const { data, error } = await db.from("table_1").select("*");
+  const { data, error } = await db.from("to_read").select("*");
 
 //   console.log(data);
 
@@ -84,14 +84,14 @@ async function loadRows() {
     entryDiv.style.borderRadius = "12px";
     entryDiv.style.fontSize = "20px";
     entryDiv.style.margin = "10px";
-    entryDiv.style.justifyContent = "center";
-    entryDiv.style.padding = "10px";
+    // entryDiv.style.padding = "10px";
     entryDiv.style.fontFamily = "mulish";
     entryDiv.style.display = "flex";
-    entryDiv.style.flexDirection = "column";
+    entryDiv.style.flexDirection = "row";
+    entryDiv.style.justifyContent = "flex-start";
 
     let entryDesc = document.createElement("p");
-    entryDesc.textContent = entry.book_to_read + " by " + entry.author_name + ", goal to finish by " + entry.goal_to_read;
+    entryDesc.textContent = "\"" + entry.book_to_read + "\" by " + entry.author_name + ", goal to finish by " + entry.goal_to_read;
 
     let entryEdit = document.createElement("button");
     entryEdit.textContent = "Edit";
@@ -122,7 +122,7 @@ async function createRow() {
 
   // supabase insert new row
   const { error } = await db
-    .from("table_1")
+    .from("to_read")
     .insert([{ book_to_read: book_to_read_input.value, 
             author_name: author_name_input.value,
             goal_to_read: goal_to_read_input.value
@@ -141,7 +141,7 @@ async function createRow() {
 // delete a row based on passed ID to function
 async function deleteRow(id) {
   // supabase delete row by id
-  const { error } = await db.from("table_1").delete().eq("id", id);
+  const { error } = await db.from("to_read").delete().eq("id", id);
 
   if (error) {
     console.error(error);
@@ -154,7 +154,7 @@ async function deleteRow(id) {
 // edit a row based on the current book_to_read_input value and ID passed to function
 async function editRow(id) {
   // supabase update row by id
-  const { error } = await db.from("table_1").update({ book_to_read: book_to_read_input.value, 
+  const { error } = await db.from("to_read").update({ book_to_read: book_to_read_input.value, 
                                                       author_name: author_name_input.value,
                                                       goal_to_read: goal_to_read_input.value }).eq("id", id).select();
 

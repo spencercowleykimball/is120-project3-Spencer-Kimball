@@ -6,7 +6,6 @@ Create a Supabase CRUD application related to a topic that you are interested in
 
 - Your table should include 5 total columns (this may include `id` and `created_at`)
 - You must include the following CRUD operations
-  - Create a new row
   - Read all rows
   - Update row by ID
   - Delete row by ID
@@ -32,6 +31,8 @@ Instead I had been trying to do a full line to edit the table for each column in
 I kept losing information in the supabase table, but it kept updating and editing the first column's information just fine. That was when I realized I needed to pass everything into the first line of code.
 
 **Is there anything you would like to add or change for your Project 3 in the future?**
+
+I would like to add a way to order the cards based on when the goal to finish by is set for. I would also want to add an image of the cover of each of the books on the card somewhere. It would also be nice to add an option where I could text the information to one of those 5 digit numbers so it could be added to the list without me having to open the website, and I could refer to the website later. I find that I want to add books to a list when I am mid conversation with a friend, and I don't want to take a lot of time trying to find the list and update/edit it in an effort to be more present.
 
 Submit this project as a GitHub repo named `is120-project3-firstname-lastname`.
 

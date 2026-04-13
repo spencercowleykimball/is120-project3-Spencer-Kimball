@@ -10,18 +10,35 @@
     <script defer src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Ovo&display=swap" rel="stylesheet">
 </head>
+
+<header>
+    <div class="header-container">
+        <h1>Reading List</h1>
+    </div>
+</header>
+
 <body>
-    <h1>Book To Read List</h1>
-    <p>Book Title: </p>
-    <input type="text" id="book_to_read_input"/>
-    <p>Author Name: </p>
-    <input type="text" id="author_name_input"/>
-    <p>Goal to Read: </p>
-    <input type="text" id="goal_to_read_input"/>
-    <br>
-    <button></button>
-    <div class="container"></div>
+
+    
+    <div class="main_card_container">
+
+        <div class="main_entry_div">
+            <p>Book Title: </p>
+            <input type="text" id="book_to_read_input"/>
+            <p>Author Name: </p>
+            <input type="text" id="author_name_input"/>
+            <p>Goal to Read: </p>
+            <input type="text" id="goal_to_read_input"/>
+            <br>
+            <button></button>
+        </div>
+        <div class="container"></div>
+    </div>
 
     
 </body>

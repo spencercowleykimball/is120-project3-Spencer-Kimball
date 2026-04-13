@@ -79,14 +79,19 @@ async function loadRows() {
 
     let entryDiv = document.createElement("div");
 
+    // Set some basic css styling via js code
+    entryDiv.style.backgroundColor = "rgb(173, 172, 172)";
+    entryDiv.style.borderRadius = "12px";
+    entryDiv.style.fontSize = "20px";
+    entryDiv.style.margin = "10px";
+    entryDiv.style.justifyContent = "center";
+    entryDiv.style.padding = "10px";
+    entryDiv.style.fontFamily = "mulish";
+    entryDiv.style.display = "flex";
+    entryDiv.style.flexDirection = "column";
+
     let entryDesc = document.createElement("p");
     entryDesc.textContent = entry.book_to_read + " by " + entry.author_name + ", goal to finish by " + entry.goal_to_read;
-
-    // let entryAuth = document.createElement("p");
-    // entryAuth.textContent = entry.author_name;
-
-    // let entryGoal = document.createElement("p");
-    // entryGoal.textContent = entry.goal_to_read;
 
     let entryEdit = document.createElement("button");
     entryEdit.textContent = "Edit";
@@ -113,7 +118,7 @@ async function createRow() {
     // Does have the correct author name at this point
     // console.log(author_name_input.value);
 
-    console.log(book_to_read_input.value);
+    // console.log(book_to_read_input.value);
 
   // supabase insert new row
   const { error } = await db
